@@ -3,6 +3,8 @@ export * from "./environment.schema";
 export * from "./organization-member.schema";
 export * from "./organization.schema";
 export * from "./project.schema";
+export * from "./root-admin.schema";
 export * from "./secret-version.schema";
+export * from "./secret.schema";
 export * from "./service-tokens.schema";
 export * from "./user.schema";

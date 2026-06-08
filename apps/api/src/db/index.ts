@@ -1,2 +1,3 @@
 export * from "./registry";
-export * from "./service";
+export * as sc from "./schema";
+export * as service from "./service";

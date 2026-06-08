@@ -7,6 +7,7 @@ import {
   uniqueIndex,
   varchar,
 } from "drizzle-orm/pg-core";
+
 import { timestamps, uuidPrimaryKey } from "../utils";
 
 export const users = pgTable(

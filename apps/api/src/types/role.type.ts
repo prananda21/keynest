@@ -1,4 +1,4 @@
-import { ORGANIZATION_ROLES, PROJECT_ROLES } from "@/constants";
+import type { ORGANIZATION_ROLES, PROJECT_ROLES } from "@/constants";
 
 export type OrganizationRole =
   (typeof ORGANIZATION_ROLES)[keyof typeof ORGANIZATION_ROLES];

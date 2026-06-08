@@ -1,7 +1,9 @@
 import { sql } from "drizzle-orm";
+
 import { logger } from "@/lib/log";
-import { db } from "./registry";
 import { ServiceUnavailableException } from "@/utils/errors/custom";
+
+import { db } from "./registry";
 
 export type DbConnectionHealth = {
   ok: boolean;

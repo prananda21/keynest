@@ -1,0 +1,35 @@
+---
+title: Capabilities & Tech Stack
+description: Keynest Capabilites & Tech Stack Services
+---
+
+# Core capabilities
+
+- **Authentication**: email/password login, JWT access token creation, bearer-token middleware, password hashing with Bun Argon2id.
+- **Authorization**: organization-level roles, project-level roles, and root-admin privileges.
+- **Secret Management**: store secret keys, encrypted secret versions, environment-specific values, version history, and expiration metadata.
+- **Environment Management**: manage project environments such as development, staging, and production.
+- **Service Tokens**: create hashed project-scoped tokens for machine/API access.
+- **Audit Logging**: track user and service-token actions across organizations, projects, environments, secrets, and tokens.
+- **Infrastructure**: PostgreSQL for persistence and Redis prepared for session/cache-style workloads through Docker Compose.
+
+# Tech Stack
+
+### Backend Stack
+
+```bash
+Runtime: Bun
+Framework: Elysia
+Database: PostgreSQL
+ORM: Drizzle
+Auth Token: JWT via jose
+Password Hashing: Bun.password Argon2id
+Validation: Elysia TypeBox schemas
+```
+
+
+### Frontend Stack
+
+```bash
+Framework: Next.JS
+```

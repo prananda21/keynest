@@ -1,0 +1,14 @@
+---
+title: Background
+description: Keynest Background
+---
+
+# Background
+
+Modern applications depend on many sensitive values: API keys, database URLs, service credentials, webhook secrets, access tokens, encryption keys, and environment-specific configuration. As projects grow, these secrets often spread across `.env` files, chat messages, deployment dashboards, local machines, and CI/CD settings. This makes them hard to track, rotate, audit, and protect.
+
+Keynest is designed to solve that problem by providing a vault-like mechanism for managing application secrets in one controlled place. It helps teams store secrets securely, organize them by organization, project, and environment, and control who can access or modify them.
+
+Instead of treating secrets as scattered text values, Keynest treats them as managed resources. Each secret can have versions, encrypted values, environment-specific entries, ownership metadata, and audit history. This gives teams a clearer operational model for handling sensitive configuration across development, staging, and production.
+
+Keynest also supports service tokens for machine access, role-based permissions for users, and audit logs for traceability. The goal is to make secret management safer and more maintainable without forcing teams to build their own internal vault tooling from scratch.

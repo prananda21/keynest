@@ -1,0 +1,21 @@
+---
+title: Introduction
+description: Keynest Documentation
+---
+
+# Overview
+
+__Keynest__ is an API key and secrets management platform for organizing, securing, and auditing sensitive application configuration across organizations, projects, and environments.
+
+The application is built around a multi-tenant structure:
+```bash
+Organization
+  -> Members
+  -> Projects
+      -> Environments
+      -> Secrets
+      -> Service Tokens
+      -> Audit Logs
+```
+
+Users authenticate with email and password, receive a JWT access token, and operate inside an organization/project context. Roles are scoped through membership tables: organization roles come from `organization_members`, while project roles come from `project_members`.

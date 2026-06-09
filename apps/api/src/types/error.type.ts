@@ -1,4 +1,4 @@
-import {
+import type {
   HTTP_CLIENT_ERROR_CODE,
   HTTP_SERVER_ERROR_CODE,
   HTTP_SUCCESS_CODE,

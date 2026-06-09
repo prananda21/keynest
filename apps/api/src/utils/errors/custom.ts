@@ -1,4 +1,5 @@
 import { HTTP_CLIENT_ERROR_CODE, HTTP_SERVER_ERROR_CODE } from "@/constants";
+
 import { CustomErrorException } from "./abstract";
 
 export class BadRequestException extends CustomErrorException {

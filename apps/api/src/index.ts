@@ -1,7 +1,8 @@
 import { Elysia } from "elysia";
-import { logger } from "./lib/log";
+
 import { CONFIG } from "./config";
-import { initializeDb } from "./db";
+import { initializeDb } from "./db/service";
+import { logger } from "./lib/log";
 
 export const app = new Elysia()
   .get("/", () => "Hello Elysia")

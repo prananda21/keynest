@@ -1,5 +1,7 @@
 import { index, pgTable, uniqueIndex, uuid } from "drizzle-orm/pg-core";
+
 import { ORGANIZATION_ROLES } from "@/constants";
+
 import { timestamps, uuidPrimaryKey } from "../utils";
 import { organizationRoleEnum } from "../utils/enum.schema";
 import { organizations } from "./organization.schema";

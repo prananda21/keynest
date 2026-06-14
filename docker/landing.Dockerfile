@@ -13,6 +13,7 @@ RUN bun run build
 
 FROM oven/bun:1-slim
 WORKDIR /app
+COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/apps/landing/dist ./dist
 EXPOSE 8080
-CMD ["waku", "start"]
+CMD ["bun", "node_modules/.bin/waku", "start"]

@@ -5,7 +5,7 @@ COPY package.json bun.lock ./
 COPY apps/api/package.json ./apps/api/
 COPY apps/web/package.json ./apps/web/
 COPY apps/landing/package.json ./apps/landing/
-RUN bun install --frozen-lockfile
+RUN bun install
 
 COPY apps/landing ./apps/landing
 WORKDIR /app/apps/landing

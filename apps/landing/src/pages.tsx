@@ -11,3 +11,5 @@ export default router.createPages(function ({ createPage }) {
     component: HomePage,
   });
 });
+
+console.log('trigger deployment')

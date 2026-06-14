@@ -13,7 +13,10 @@ RUN bun run build
 
 FROM oven/bun:1-slim
 WORKDIR /app
+# Root node_modules contains the .bun content-addressed cache that landing's symlinks resolve into
 COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/apps/landing/dist ./dist
+# Landing app dir includes node_modules with symlinks pointing into /app/node_modules/.bun
+COPY --from=builder /app/apps/landing ./apps/landing
 EXPOSE 8080
-CMD ["bun", "node_modules/.bin/waku", "start"]
+WORKDIR /app/apps/landing
+CMD ["bun", "run", "start"]

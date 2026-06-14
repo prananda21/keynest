@@ -9,6 +9,7 @@ import {
   uuid,
   varchar,
 } from "drizzle-orm/pg-core";
+
 import { timestamps, uuidPrimaryKey } from "../utils";
 import { environments } from "./environment.schema";
 import { secrets } from "./secret.schema";

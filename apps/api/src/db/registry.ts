@@ -1,15 +1,17 @@
-import { Pool } from "pg";
 import { drizzle } from "drizzle-orm/node-postgres";
+import { Pool } from "pg";
+
+import { CONFIG } from "@/config";
+
 import * as schema from "./schema";
 
 /**
  * Shared PostgreSQL connection pool for the API process.
  *
- * The connection string is read from `DB_URL`, so the API should be started
- * with that environment variable configured.
+ * The connection string is normalized by `src/config.ts`.
  */
 const pool = new Pool({
-  connectionString: process.env.DB_URL!,
+  connectionString: CONFIG.DB_URL,
 });
 
 /**

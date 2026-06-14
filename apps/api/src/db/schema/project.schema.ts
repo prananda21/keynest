@@ -7,6 +7,7 @@ import {
   uuid,
   varchar,
 } from "drizzle-orm/pg-core";
+
 import { timestamps, uuidPrimaryKey } from "../utils";
 import { organizations } from "./organization.schema";
 import { users } from "./user.schema";

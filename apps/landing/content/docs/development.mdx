@@ -1,0 +1,44 @@
+---
+title: Development Process
+description: Keynest development roadmap and implementation focus
+---
+
+# Development Process
+
+Keynest is being developed in phases so the platform foundation is stable before the user-facing website is expanded. The current priority is to complete the API layer first, then build the website experience on top of those finalized backend contracts.
+
+## Current Focus: API Development
+
+From now until the end of July 2026, development is focused on the API application. This phase covers the backend foundation for authentication, authorization, secret management, project structure, and operational infrastructure.
+
+The API work includes:
+
+- Email and password authentication
+- JWT access token creation and bearer-token verification
+- Session handling for login, logout, and refresh flows
+- Organization, project, and role-based access modeling
+- Secret, environment, service token, and audit log schemas
+- PostgreSQL and Redis service setup for local development
+- Request and response validation for public API contracts
+
+The goal of this phase is to make the backend reliable enough that the frontend can depend on clear, stable API behavior.
+
+## Next Focus: Website Development
+
+Starting in August 2026, development will shift toward the website application. This phase will focus on building the user-facing interface for managing organizations, projects, environments, secrets, and service tokens.
+
+The website work will include:
+
+- Authentication screens for login and session handling
+- Dashboard layouts for organizations and projects
+- Secret management screens for creating, viewing, updating, and rotating secrets
+- Environment management workflows
+- Service token management for machine access
+- Audit log views for tracking sensitive activity
+- Integration with the completed API endpoints
+
+The website phase should reuse the API contracts instead of redefining business rules in the frontend. Authorization, validation, and secret handling rules should remain owned by the API.
+
+## Development Principle
+
+Keynest should be built from the backend contract outward. The API defines the data model, access rules, validation behavior, and security boundaries. The website should provide a clear interface over those backend capabilities without duplicating sensitive logic.

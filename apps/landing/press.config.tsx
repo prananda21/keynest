@@ -5,7 +5,6 @@ import { uiTranslations } from "fumadocs-ui/i18n";
 import { fumapressTranslations } from "fumapress/i18n";
 import { flexsearchPlugin } from "fumapress/plugins/flexsearch";
 import { llmsPlugin } from "fumapress/plugins/llms.txt";
-import { takumiPlugin } from "fumapress/plugins/takumi";
 import { docs } from "./.source/server";
 
 const i18n = defineI18n({
@@ -29,5 +28,5 @@ export default defineConfig({
       githubUrl: "https://github.com/prananda21/keynest",
     }),
   })
-  .plugins(flexsearchPlugin(), llmsPlugin(), takumiPlugin())
+  .plugins(flexsearchPlugin(), llmsPlugin())
   .adapters(fumadocsMdx());

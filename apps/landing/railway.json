@@ -5,7 +5,6 @@
     "dockerfilePath": "docker/landing.Dockerfile"
   },
   "deploy": {
-    "startCommand": "waku start",
     "restartPolicyType": "ON_FAILURE",
     "healthcheckPath": "/"
   }
